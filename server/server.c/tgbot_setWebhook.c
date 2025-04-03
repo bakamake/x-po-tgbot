@@ -28,7 +28,7 @@ int tgbot_setWebhook(int argc, char *argv[]) {
     // 设置请求体
     cJSON *payload = cJSON_CreateObject();
     cJSON_AddStringToObject(payload, "url", webhook_url);
-    cJSON_AddBoolToObject(payload, "drop_pending_updates", true);
+    cJSON_AddBoolToObject(payload, "drop_pending_updates", 1);
 
     // 将请求体转换为JSON字符串
     char *payload_json = cJSON_Print(payload);
